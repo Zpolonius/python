@@ -1,6 +1,5 @@
 import urllib.request
 import base64
-import datetime
 import os
 
 # Set the base URL and initial ID value
