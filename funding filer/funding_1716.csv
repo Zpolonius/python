@@ -1,0 +1,3 @@
+Date;Type;ID;"Reconciliation Identifier";Payment;Order;Terminal;Shop;"Transaction Currency";"Transaction Amount";"Exchange Rate";"Settlement Currency";"Settlement Amount";"Fixed Fee";"Fixed Fee VAT";"Rate Based Fee";"Rate Based Fee VAT"
+2023-04-04;payment;2977ac6e-5924-4224-8326-4a949ab082f0;ee4cd9a6-42d7-43f9-8a3e-0f080aba8dd1;234041;194334-812731108-6358f86cea902;"AltaPay CC USD";AltaNomics;USD;879.75;100.00000;USD;879.75;0.00;0.00;-21.38;0.00
+2023-04-05;fee;"swift fee";;;;;AltaNomics;USD;0.00;;USD;-9.90;0.00;0.00;0.00;0.00
