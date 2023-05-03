@@ -4,7 +4,7 @@ import datetime
 import os
 
 # Set the base URL and initial ID value
-base_url = "https://altapay.altapaysecure.com/merchant.php/API/fundingDownload?id="
+base_url = ".altapaysecure.com/merchant.php/API/fundingDownload?id="
 
 # Set the current date and format it for the URL
 current_date = datetime.datetime.today().strftime('%Y-%m-%d')
@@ -23,12 +23,15 @@ password = input('Enter the password: ')
 # Ask the user for the ID value
 id_value = int(input("Enter the ID value: "))
 
+#Set the domain
+name_url = 'https://altapay'
+
 
 # Encode the credentials as base64
 auth = base64.encodebytes(f"{username}:{password}".encode()).decode().strip()
 
 # Construct the full URL for the CSV file to download, including Basic Authentication
-url = f"{base_url}{id_value}"
+url = f"{name_url}{base_url}{id_value}"
 request = urllib.request.Request(url)
 request.add_header("Authorization", f"Basic {auth}")
 
@@ -38,3 +41,4 @@ with urllib.request.urlopen(request) as response:
         file.write(response.read())
 
 print(f"CSV file downloaded to {filename}")
+print(url)
