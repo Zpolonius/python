@@ -24,14 +24,14 @@ password = input('Enter the password: ')
 id_value = int(input("Enter the ID value: "))
 
 #Set the domain
-name_url = 'https://altapay'
+domain_url = 'altapay'
 
 
 # Encode the credentials as base64
 auth = base64.encodebytes(f"{username}:{password}".encode()).decode().strip()
 
 # Construct the full URL for the CSV file to download, including Basic Authentication
-url = f"{name_url}{base_url}{id_value}"
+url = f"https://{domain_url}{base_url}{id_value}"
 request = urllib.request.Request(url)
 request.add_header("Authorization", f"Basic {auth}")
 
