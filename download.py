@@ -24,6 +24,7 @@ filename = os.path.join(folder_name, f"funding_{id_value}.csv")
 #Set the domain
 domain_url = 'altapay'
 
+
 # Encode the credentials as base64
 auth = base64.encodebytes(f"{username}:{password}".encode()).decode().strip()
 
@@ -31,6 +32,8 @@ auth = base64.encodebytes(f"{username}:{password}".encode()).decode().strip()
 url = f"https://{domain_url}{base_url}{id_value}"
 request = urllib.request.Request(url)
 request.add_header("Authorization", f"Basic {auth}")
+
+
 
 # Download the CSV file and save it to disk
 with urllib.request.urlopen(request) as response:
