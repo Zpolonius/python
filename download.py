@@ -14,7 +14,6 @@ password = input('Enter the password: ')
 # Ask the user for the ID value
 id_value = int(input("Enter the ID value: "))
 
-
 # Set the filename to use for the downloaded file
 folder_name = "funding filer"
 if not os.path.exists(folder_name):
